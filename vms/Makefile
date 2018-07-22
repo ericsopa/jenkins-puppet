@@ -18,11 +18,11 @@ ssh-add:
 
 agent-git:
 	vagrant ssh -c "sudo yum -y install git-core" agent
-	vagrant ssh -c "https://github.com/ericsopa/jenkins-puppet.git" agent
+	vagrant ssh -c "git clone https://github.com/ericsopa/jenkins-puppet.git" agent
 
 master-git:
 	vagrant ssh -c "sudo yum -y install git-core" master
-	vagrant ssh -c "https://github.com/ericsopa/jenkins-puppet.git" master
+	vagrant ssh -c "git clone https://github.com/ericsopa/jenkins-puppet.git" master
 
 git:	agent-git master-git
 
